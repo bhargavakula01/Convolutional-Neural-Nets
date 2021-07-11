@@ -1,0 +1,32 @@
+Notes on Convolutional Neural Networks
+
+WHAT ARE CONVOLUTIONAL NEURAL NETWORK:
+- Allows one to work with more complex data, as regular(fully connected) neural networks are usually inefficient with large amount of data
+- good when working with images and sounds
+
+
+COMPONENTS OF CNN(CONVOLUTIONAL NEURAL NETWORKS)
+- filters: basically scan data and look for specific features that they are trained to look for
+    - filter size: the length of each filter(which is a squre shape)
+    - filter/kernal stride: number of pixel shifts over the input matrix
+    - each pixel within the filter will have a different weight but the filter will have the same bias(within each forward and backward propagation, these don't change)
+        - calculations : overall weight = r_Val * weight + g_Val * weight + b_Val * weight
+            - all all the overal weights within the filter and then summed up into 1 number per filter
+- pooling: reduces the dimentionality of the filter/kernal. Only when filters are pooled together is when the neural net able to detect larger features in a particular image
+- zero padding: adding pixel with value of 0 around the ends of the image(for the Convolutional neural networks)
+    - allows for even search of the image by kernals/filters
+
+- depth in a convoltional layer is the number of filters that a particular convolutional layer has
+
+How to calculate the output dimension of the CNN: W1 = ((W2 - f + 2p) / S)+1
+    - W1: output dimension <-- this number is your length and the width of the dimentions. The depth is the number of filters in each convoltional layer.
+    - W2: input dimension
+    - f: receptive field(size of filter)
+    - p: zero padding
+    - S: kernal/filter stride
+
+
+Pooling Layer: 
+- https://www.ibm.com/cloud/learn/convolutional-neural-networks
+
+
